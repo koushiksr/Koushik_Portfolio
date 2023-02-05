@@ -14,7 +14,7 @@
   <div id="header">
     <div class="container">
       <nav>
-        <img src="images/logo.png" alt="logo">
+        <img src="logo.png" alt="logo">
         <ul id="sidemenu">
           <li><a href="#header">Home</a> </li>
           <li><a href="#about">About</a></li>
@@ -23,7 +23,7 @@
           <li><a href="#contact">Contact</a></li>
           <i class=" fas fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
         </ul>
-        <i class=" fas fa-solid fa-bars" onclick="openmenu()"></i> 
+        <i class=" fas fa-solid fa-bars" onclick="openmenu()"></i>
       </nav>
 
       <div class="header-text">
@@ -38,7 +38,7 @@
     <div class="container">
       <div class="row">
         <div class="about-col-1">
-          <img src="images/user.png" alt="">
+          <img src="user.png" alt="">
         </div>
         <div class="about-col-2">
           <h1 class="sub-title">About Me</h1>
@@ -123,7 +123,7 @@
       <h1 class="sub-title">My Work</h1>
       <div class="work-list">
         <div class="work">
-          <img src="images/work-1.png" alt="">
+          <img src="work-1.png" alt="">
           <div class="layer">
             <h3>Social Media App</h3>
             <p>hi this is koushik s r and i did thid project on my own only </p>
@@ -132,7 +132,7 @@
 
         </div>
         <div class="work">
-          <img src="images/work-2.png" alt="">
+          <img src="work-2.png" alt="">
           <div class="layer">
             <h3>Social Media App</h3>
             <p>hi this is koushik s r and i did thid project on my own only </p>
@@ -140,7 +140,7 @@
           </div>
         </div>
         <div class="work">
-          <img src="images/work-3.png" alt="">
+          <img src="work-3.png" alt="">
           <div class="layer">
             <h3>Social Media App</h3>
             <p>hi this is koushik s r and i did thid project on my own only </p>
@@ -167,7 +167,7 @@
             <a href=""><i class="fa-brands fa-linkedin"></i></a>
             <a href=""><i class="fa-brands fa-twitter-square"></i></a>
           </div>
-          <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+          <a href="my-cv.pdf" download class="btn btn2">Download CV</a>
         </div>
         <div class="contact-right">
           <form name="submit-to-google-sheet">
@@ -207,36 +207,36 @@
   </script>
 
   <script>
-    var sidemenu=document.getElementById("sidemenu");
+    var sidemenu = document.getElementById("sidemenu");
 
-    function openmenu(){
-      sidemenu.style.right="0"
+    function openmenu() {
+      sidemenu.style.right = "0"
     }
-    function closemenu(){
-      sidemenu.style.right="-200px"
+    function closemenu() {
+      sidemenu.style.right = "-200px"
     }
 
   </script>
 
 
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbwsjz7AV_roZajjgeV-luzMSRMv0h-ecgugGV6ZWiSCKDYGCIiErY8-YuFhFKt2qrfv/exec'
-  const form = document.forms['submit-to-google-sheet']
-  const msg=document.getElementById("msg")
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwsjz7AV_roZajjgeV-luzMSRMv0h-ecgugGV6ZWiSCKDYGCIiErY8-YuFhFKt2qrfv/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        msg.innerHTML ="Messege sent successfully"
-        setTimeout(function(){
-          msg.innerHTML=""
-        },5000) 
-        form.reset()
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          msg.innerHTML = "Messege sent successfully"
+          setTimeout(function () {
+            msg.innerHTML = ""
+          }, 5000)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 
 </html>
